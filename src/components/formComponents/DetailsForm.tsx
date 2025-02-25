@@ -1,13 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import { DetailsFormData, DetailsFormProps } from "../types";
 
-export interface DetailsFormData {
-  name: string;
-  email: string;
-  phone: string;
-  address: string;
-}
-
-export default function DetailsForm() {
+export default function DetailsForm({ onSubmit }: DetailsFormProps) {
   const [formData, setFormData] = useState<DetailsFormData>({
     name: "",
     email: "",
@@ -16,8 +10,8 @@ export default function DetailsForm() {
   });
 
   const handleSubmit = (e: FormEvent) => {
-    // something to handle ??
     e.preventDefault();
+    onSubmit(formData);
     setFormData({
       name: "",
       email: "",
@@ -44,6 +38,7 @@ export default function DetailsForm() {
         name="name"
         value={formData.name}
         onChange={handleChange}
+        autoComplete="off"
         required
       />
       <label htmlFor="email">Email</label>
@@ -53,6 +48,8 @@ export default function DetailsForm() {
         name="email"
         value={formData.email}
         onChange={handleChange}
+        autoComplete="off"
+        required
       />
       <label htmlFor="phone">Phone Number</label>
       <input
@@ -61,6 +58,7 @@ export default function DetailsForm() {
         name="phone"
         value={formData.phone}
         onChange={handleChange}
+        autoComplete="off"
       />
       <label htmlFor="address">Address</label>
       <input
@@ -69,6 +67,7 @@ export default function DetailsForm() {
         name="address"
         value={formData.address}
         onChange={handleChange}
+        autoComplete="off"
       />
       <button type="submit">Submit</button>
     </form>

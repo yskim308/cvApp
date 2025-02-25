@@ -1,23 +1,24 @@
-import { useState, useEffect } from "react";
 import { DetailsFormData } from "../formComponents/DetailsForm";
 
 interface DetailsViewProps {
-  formData: DetailsFormData;
+  formData?: DetailsFormData;
 }
 
-export default function DetailsView({ formData }: DetailsViewProps) {
-  const [data, setData] = useState<DetailsFormData>(formData);
-
-  useEffect(() => {
-    setData(formData);
-  }, [formData]);
-
+export default function DetailsView({
+  formData = {
+    name: "John Doe",
+    email: "john@gmail.com",
+    phone: "999999999",
+    address: "5 Sigma Lane, Olympus",
+  },
+}: DetailsViewProps) {
   return (
-    <div>
-      <div>{data.name}</div>
-      <div>{data.email}</div>
-      <div>{data.phone}</div>
-      <div>{data.address}</div>
+    <div className="flex flex-col">
+      <div className="text-2xl font-semibold">Details</div>
+      <div>name: {formData.name}</div>
+      <div>email: {formData.email}</div>
+      <div>phone: {formData.phone}</div>
+      <div>address: {formData.address}</div>
     </div>
   );
 }

@@ -1,11 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-
-export interface EducationFormData {
-  school: string;
-  degree: string;
-  date: string;
-  location: string;
-}
+import { EducationFormData } from "../types";
 
 export default function EducationForm() {
   const [formData, setFormData] = useState<EducationFormData>({
