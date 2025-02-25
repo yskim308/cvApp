@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import DetailsForm from "./components/formComponents/DetailsForm";
 import EducationForm from "./components/formComponents/EducationForm";
 import DetailsView from "./components/viewComponents/DetailsView";
@@ -14,6 +14,8 @@ function App() {
   const handleDetailsSubmit = (data: DetailsFormData) => {
     setDetailsData(data);
   };
+
+  const [];
   return (
     <>
       <div className="border border-red-500 w-1/3">
