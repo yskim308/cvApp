@@ -11,6 +11,8 @@ createRoot(document.getElementById("root")!).render(
       <DetailsForm />
       <EducationForm />
     </div>
-    <div className="border border-blue-500 w-2/3"></div>
+    <div className="border border-blue-500 w-2/3">
+      <DetailsView />
+    </div>
   </StrictMode>,
 );
