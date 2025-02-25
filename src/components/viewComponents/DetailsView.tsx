@@ -1,4 +1,4 @@
-import { DetailsFormData } from "../formComponents/DetailsForm";
+import { DetailsFormData } from "../types";
 
 interface DetailsViewProps {
   formData?: DetailsFormData;
