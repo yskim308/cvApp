@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
-interface EducationFormData {
+export interface EducationFormData {
   school: string;
   degree: string;
   date: string;

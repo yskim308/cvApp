@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
-interface DetailsFormData {
+export interface DetailsFormData {
   name: string;
   email: string;
   phone: string;
