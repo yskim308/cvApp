@@ -5,6 +5,10 @@ export interface EducationFormData {
   location: string;
 }
 
+export interface EducationFormProps {
+  onSubmit: (data: EducationFormData) => void;
+}
+
 export interface DetailsFormData {
   name: string;
   email: string;
