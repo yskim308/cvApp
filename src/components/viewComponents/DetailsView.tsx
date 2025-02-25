@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { DetailsFormData } from "./DetailsForm";
+import { DetailsFormData } from "../formComponents/DetailsForm";
 
 interface DetailsViewProps {
   formData: DetailsFormData;
