@@ -1,14 +1,14 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
-interface FormData {
+interface DetailsFormData {
   name: string;
   email: string;
   phone: string;
   address: string;
 }
 
-export default function Details() {
-  const [formData, setFormData] = useState<FormData>({
+export default function DetailsForm() {
+  const [formData, setFormData] = useState<DetailsFormData>({
     name: "",
     email: "",
     phone: "",
