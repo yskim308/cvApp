@@ -33,7 +33,8 @@ export default function JobForm({ onSubmit }: JobFormProps) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex flex-col">
+        <div className="text-2xl font-semibold">Work Experience</div>
         <label htmlFor="company">Company</label>
         <input
           type="text"
@@ -82,7 +83,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           value={formData.location}
           autoComplete="off"
         />
-        <label htmlFor="description">location</label>
+        <label htmlFor="description">description</label>
         <input
           type="text"
           name="description"
