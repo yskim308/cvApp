@@ -9,6 +9,7 @@ import {
 } from "./components/types";
 import EducationView from "./components/viewComponents/EducationView";
 import JobForm from "./components/formComponents/JobForm";
+import JobView from "./components/viewComponents/JobView";
 
 function App() {
   const [detailsData, setDetailsData] = useState<DetailsFormData>({
@@ -58,6 +59,7 @@ function App() {
       <div className="border border-blue-500 w-2/3">
         <DetailsView formData={detailsData} />
         <EducationView formData={educationData} />
+        <JobView formData={jobData} />
       </div>
     </>
   );
