@@ -2,7 +2,11 @@ import { useState } from "react";
 import DetailsForm from "./components/formComponents/DetailsForm";
 import EducationForm from "./components/formComponents/EducationForm";
 import DetailsView from "./components/viewComponents/DetailsView";
-import { DetailsFormData, EducationFormData } from "./components/types";
+import {
+  DetailsFormData,
+  EducationFormData,
+  JobFormData,
+} from "./components/types";
 import EducationView from "./components/viewComponents/EducationView";
 
 function App() {
@@ -25,6 +29,22 @@ function App() {
 
   const handleEducationSubmit = (data: EducationFormData) => {
     setEducationData(data);
+  };
+
+  const [jobData, setJobData] = useState<JobFormData[]>([
+    {
+      company: "Google",
+      position: "Janitor",
+      start: "January 19, 1876",
+      end: "March 20, 2099",
+      location: "Mongolia",
+      description:
+        "Performed extreme cleaning operations and what not and things and such. lorem ipsum and yeah haha",
+    },
+  ]);
+
+  handleJobSubmit = (newJob: JobFormData) => {
+    setJobData([...jobData, newJob]);
   };
 
   return (
