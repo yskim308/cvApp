@@ -43,4 +43,5 @@ export interface JobFormProps {
 
 export interface JobViewProps {
   formData?: JobFormData[];
+  handleJobDelete: (jobToDelete: JobFormData) => void;
 }

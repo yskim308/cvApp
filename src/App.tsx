@@ -49,6 +49,10 @@ function App() {
     setJobData([...jobData, newJob]);
   };
 
+  const handleJobDelete = (jobToDelete: JobFormData) => {
+    setJobData(jobData.filter((job) => job !== jobToDelete));
+  };
+
   return (
     <>
       <div className="border border-red-500 w-1/3">
@@ -59,7 +63,7 @@ function App() {
       <div className="border border-blue-500 w-2/3">
         <DetailsView formData={detailsData} />
         <EducationView formData={educationData} />
-        <JobView formData={jobData} />
+        <JobView formData={jobData} handleJobDelete={handleJobDelete} />
       </div>
     </>
   );
