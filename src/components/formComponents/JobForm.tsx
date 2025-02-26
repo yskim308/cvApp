@@ -21,6 +21,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    onSubmit(formData);
     setFormData({
       company: "",
       position: "",
