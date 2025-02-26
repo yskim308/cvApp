@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { EducationFormData } from "../types";
+import { EducationFormData, EducationFormProps } from "../types";
 
-export default function EducationForm() {
+export default function EducationForm({ onSubmit }: EducationFormProps) {
   const [formData, setFormData] = useState<EducationFormData>({
     school: "",
     degree: "",
@@ -20,6 +20,13 @@ export default function EducationForm() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    setFormData({
+      school: "",
+      degree: "",
+      date: "",
+      location: "",
+    });
+    onSubmit(formData);
   };
 
   return (
@@ -32,6 +39,7 @@ export default function EducationForm() {
         id="school"
         onChange={handleChange}
         value={formData.school}
+        autoComplete="off"
         required
       />
       <label htmlFor="degree">Degree</label>
@@ -41,6 +49,7 @@ export default function EducationForm() {
         id="degree"
         onChange={handleChange}
         value={formData.degree}
+        autoComplete="off"
         required
       />
       <label htmlFor="date">Graduation Date</label>
@@ -52,6 +61,7 @@ export default function EducationForm() {
         id="location"
         onChange={handleChange}
         value={formData.location}
+        autoComplete="off"
         required
       />
       <button type="submit">submit</button>
