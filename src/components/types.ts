@@ -9,6 +9,10 @@ export interface EducationFormProps {
   onSubmit: (data: EducationFormData) => void;
 }
 
+export interface EducationViewProps {
+  formData?: EducationFormData;
+}
+
 export interface DetailsFormData {
   name: string;
   email: string;
@@ -18,4 +22,8 @@ export interface DetailsFormData {
 
 export interface DetailsFormProps {
   onSubmit: (data: DetailsFormData) => void;
+}
+
+export interface DetailsViewProps {
+  formData?: DetailsFormData;
 }
