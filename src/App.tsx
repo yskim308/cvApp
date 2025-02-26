@@ -43,6 +43,15 @@ function App() {
       description:
         "Performed extreme cleaning operations and what not and things and such. lorem ipsum and yeah haha",
     },
+    {
+      company: "SigmaboySigmaboy",
+      position: "Professional Bootlicker",
+      start: "July 14, 3022",
+      end: "March 25, 4100",
+      location: "Boston, MA",
+      description:
+        "succesfully bootlicked the managers until ego was boosted 300% and 2.5x glazed",
+    },
   ]);
 
   const handleJobSubmit = (newJob: JobFormData) => {
