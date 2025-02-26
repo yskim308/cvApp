@@ -8,6 +8,7 @@ import {
   JobFormData,
 } from "./components/types";
 import EducationView from "./components/viewComponents/EducationView";
+import JobForm from "./components/formComponents/JobForm";
 
 function App() {
   const [detailsData, setDetailsData] = useState<DetailsFormData>({
@@ -43,7 +44,7 @@ function App() {
     },
   ]);
 
-  handleJobSubmit = (newJob: JobFormData) => {
+  const handleJobSubmit = (newJob: JobFormData) => {
     setJobData([...jobData, newJob]);
   };
 
@@ -52,6 +53,7 @@ function App() {
       <div className="border border-red-500 w-1/3">
         <DetailsForm onSubmit={handleDetailsSubmit} />
         <EducationForm onSubmit={handleEducationSubmit} />
+        <JobForm onSubmit={handleJobSubmit} />
       </div>
       <div className="border border-blue-500 w-2/3">
         <DetailsView formData={detailsData} />
