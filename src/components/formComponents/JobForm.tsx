@@ -93,6 +93,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           value={formData.description}
           autoComplete="off"
         />
+        <button type="submit">submit</button>
       </form>
     </div>
   );
