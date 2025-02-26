@@ -1,8 +1,4 @@
-import { DetailsFormData } from "../types";
-
-interface DetailsViewProps {
-  formData?: DetailsFormData;
-}
+import { DetailsFormData, DetailsViewProps } from "../types";
 
 export default function DetailsView({
   formData = {
