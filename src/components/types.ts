@@ -27,3 +27,20 @@ export interface DetailsFormProps {
 export interface DetailsViewProps {
   formData?: DetailsFormData;
 }
+
+export interface JobFormData {
+  company: string;
+  position: string;
+  start: string;
+  end: string;
+  location: string;
+  description: string;
+}
+
+export interface JobFormProps {
+  onSubmit: (data: JobFormData) => void;
+}
+
+export interface JobViewProps {
+  formData?: JobFormData[];
+}
