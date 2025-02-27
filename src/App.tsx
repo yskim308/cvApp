@@ -64,12 +64,12 @@ function App() {
 
   return (
     <>
-      <div className="w-1/3 h-10/12 overflow-y-scroll m-5 p-3 rounded-3xl bg-slate-50">
+      <div className="w-1/3 overflow-y-scroll m-5 p-3 rounded-3xl bg-slate-50">
         <DetailsForm onSubmit={handleDetailsSubmit} />
         <EducationForm onSubmit={handleEducationSubmit} />
         <JobForm onSubmit={handleJobSubmit} />
       </div>
-      <div className="border border-blue-500 w-2/3 h-10/12">
+      <div className="border border-blue-500 w-2/3">
         <DetailsView formData={detailsData} />
         <EducationView formData={educationData} />
         <JobView formData={jobData} handleJobDelete={handleJobDelete} />
