@@ -36,7 +36,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-900"
+        className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-700"
       >
         <div className="text-xl font-semibold">Work Experience</div>
         <label htmlFor="company">Company</label>

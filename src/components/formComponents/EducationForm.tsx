@@ -36,7 +36,7 @@ export default function EducationForm({ onSubmit }: EducationFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-900 my-3"
+      className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-700 my-3"
     >
       <div className="text-xl font-semibold">Education</div>
       <label htmlFor="school">School Name</label>
