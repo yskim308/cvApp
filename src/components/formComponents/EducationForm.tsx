@@ -34,8 +34,11 @@ export default function EducationForm({ onSubmit }: EducationFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col">
-      <div className="text-3xl font-semibold">Education</div>
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-900 my-3"
+    >
+      <div className="text-xl font-semibold">Education</div>
       <label htmlFor="school">School Name</label>
       <input
         type="text"
@@ -44,6 +47,7 @@ export default function EducationForm({ onSubmit }: EducationFormProps) {
         onChange={handleChange}
         value={formData.school}
         autoComplete="off"
+        className="border h-7 py-2 px-1 rounded-lg"
         required
       />
       <label htmlFor="degree">Degree</label>
@@ -54,6 +58,7 @@ export default function EducationForm({ onSubmit }: EducationFormProps) {
         onChange={handleChange}
         value={formData.degree}
         autoComplete="off"
+        className="border h-7 py-2 px-1 rounded-lg"
         required
       />
       <label htmlFor="date">Graduation Date</label>
@@ -63,6 +68,7 @@ export default function EducationForm({ onSubmit }: EducationFormProps) {
         id="date"
         onChange={handleChange}
         value={formData.date}
+        className="border h-7 py-2 px-1 rounded-lg"
       />
       <label htmlFor="location">Location</label>
       <input
@@ -72,9 +78,17 @@ export default function EducationForm({ onSubmit }: EducationFormProps) {
         onChange={handleChange}
         value={formData.location}
         autoComplete="off"
+        className="border h-7 py-2 px-1 rounded-lg"
         required
       />
-      <button type="submit">submit</button>
+      <div className="flex justify-center p-1">
+        <button
+          type="submit"
+          className="border border-slate-400 p-1 rounded-xl text-slate-700"
+        >
+          Submit
+        </button>
+      </div>
     </form>
   );
 }
