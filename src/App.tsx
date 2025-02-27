@@ -63,18 +63,26 @@ function App() {
   };
 
   return (
-    <>
-      <div className="w-1/3 overflow-y-scroll mx-5 p-15 rounded-4xl h-10/12">
-        <DetailsForm onSubmit={handleDetailsSubmit} />
-        <EducationForm onSubmit={handleEducationSubmit} />
-        <JobForm onSubmit={handleJobSubmit} />
+    <div className="h-screen flex flex-col">
+      <div className="font-bold text-4xl text-slate-700 flex justify-center m-5">
+        CV Builder
       </div>
-      <div className="border border-blue-500 w-2/3">
-        <DetailsView formData={detailsData} />
-        <EducationView formData={educationData} />
-        <JobView formData={jobData} handleJobDelete={handleJobDelete} />
+      <div className="flex flex-grow overflow-hidden">
+        <div className="w-1/3 overflow-y-auto mx-5 p-15 rounded-4xl">
+          <DetailsForm onSubmit={handleDetailsSubmit} />
+          <EducationForm onSubmit={handleEducationSubmit} />
+          <JobForm onSubmit={handleJobSubmit} />
+        </div>
+        <div className="border border-blue-500 overflow-y-auto mx-5 w-2/3 bg-slate-50 p-5">
+          <DetailsView formData={detailsData} />
+          <EducationView formData={educationData} />
+          <JobView formData={jobData} handleJobDelete={handleJobDelete} />
+        </div>
       </div>
-    </>
+      <div className="text-lg flex justify-center">
+        <p>footer...</p>
+      </div>
+    </div>
   );
 }
 
