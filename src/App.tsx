@@ -73,7 +73,7 @@ function App() {
           <EducationForm onSubmit={handleEducationSubmit} />
           <JobForm onSubmit={handleJobSubmit} />
         </div>
-        <div className="border border-blue-500 overflow-y-auto mx-5 w-2/3 bg-slate-50 p-5">
+        <div className="border border-blue-500 overflow-y-auto mx-5 w-4xl bg-slate-50 p-5">
           <DetailsView formData={detailsData} />
           <EducationView formData={educationData} />
           <JobView formData={jobData} handleJobDelete={handleJobDelete} />
