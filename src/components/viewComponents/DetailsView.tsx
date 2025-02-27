@@ -5,8 +5,8 @@ import location from "../../assets/map-marker.svg";
 
 export default function DetailsView({ formData }: DetailsViewProps) {
   return (
-    <div className="flex flex-col mt-3">
-      <div className="text-3xl font-medium flex justify-center">
+    <div className="flex flex-col">
+      <div className="text-3xl font-medium flex justify-center mb-2">
         {formData?.name}
       </div>
       <div className="flex justify-center">
