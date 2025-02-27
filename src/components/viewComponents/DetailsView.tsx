@@ -1,13 +1,28 @@
 import { DetailsViewProps } from "../types";
+import email from "../../assets/email-outline.svg";
+import phone from "../../assets/phone.svg";
+import location from "../../assets/map-marker.svg";
 
 export default function DetailsView({ formData }: DetailsViewProps) {
   return (
-    <div className="flex flex-col">
-      <div className="text-2xl font-semibold">Details</div>
-      <div>name: {formData?.name}</div>
-      <div>email: {formData?.email}</div>
-      <div>phone: {formData?.phone}</div>
-      <div>address: {formData?.address}</div>
+    <div className="flex flex-col mt-3">
+      <div className="text-3xl font-medium flex justify-center">
+        {formData?.name}
+      </div>
+      <div className="flex justify-center">
+        <div className="flex px-3 items-center">
+          <img className="w-8 px-1" src={email} />
+          <p>{formData?.email}</p>
+        </div>
+        <div className="flex px-3 items-center">
+          <img className="w-8 px-1" src={phone} />
+          {formData?.phone}
+        </div>
+        <div className="flex px-3 items-center">
+          <img className="w-8 px-1" src={location} />
+          {formData?.address}
+        </div>
+      </div>
     </div>
   );
 }
