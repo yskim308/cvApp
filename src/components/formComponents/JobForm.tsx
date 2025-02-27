@@ -34,8 +34,11 @@ export default function JobForm({ onSubmit }: JobFormProps) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="flex flex-col">
-        <div className="text-2xl font-semibold">Work Experience</div>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-900"
+      >
+        <div className="text-xl font-semibold">Work Experience</div>
         <label htmlFor="company">Company</label>
         <input
           type="text"
@@ -44,6 +47,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           onChange={handleChange}
           value={formData.company}
           autoComplete="off"
+          className="border h-7 py-2 px-1 rounded-lg"
           required
         />
         <label htmlFor="position">position</label>
@@ -54,27 +58,38 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           onChange={handleChange}
           value={formData.position}
           autoComplete="off"
+          className="border h-7 py-2 px-1 rounded-lg"
         />
-        <label htmlFor="start">start</label>
-        <input
-          type="date"
-          name="start"
-          id="start"
-          onChange={handleChange}
-          value={formData.start}
-          autoComplete="off"
-          required
-        />
-        <label htmlFor="end">end</label>
-        <input
-          type="date"
-          name="end"
-          id="end"
-          onChange={handleChange}
-          value={formData.end}
-          autoComplete="off"
-          required
-        />
+        <div className="flex justify-around mb-2 mt-1">
+          <div>
+            <label className="font-semibold" htmlFor="start">
+              start:
+            </label>
+            <input
+              type="date"
+              name="start"
+              id="start"
+              onChange={handleChange}
+              value={formData.start}
+              autoComplete="off"
+              required
+            />
+          </div>
+          <div>
+            <label className="font-semibold" htmlFor="end">
+              end:
+            </label>
+            <input
+              type="date"
+              name="end"
+              id="end"
+              onChange={handleChange}
+              value={formData.end}
+              autoComplete="off"
+              required
+            />
+          </div>
+        </div>
         <label htmlFor="location">location</label>
         <input
           type="text"
@@ -82,6 +97,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           id="location"
           onChange={handleChange}
           value={formData.location}
+          className="border h-7 py-2 px-1 rounded-lg"
           autoComplete="off"
         />
         <label htmlFor="description">description</label>
@@ -91,9 +107,17 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           id="description"
           onChange={handleChange}
           value={formData.description}
+          className="border h-7 py-2 px-1 rounded-lg"
           autoComplete="off"
         />
-        <button type="submit">submit</button>
+        <div className="flex justify-center p-1">
+          <button
+            type="submit"
+            className="border border-slate-400 p-1 rounded-xl text-slate-700"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
