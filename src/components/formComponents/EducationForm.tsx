@@ -61,15 +61,18 @@ export default function EducationForm({ onSubmit }: EducationFormProps) {
         className="border h-7 py-2 px-1 rounded-lg"
         required
       />
-      <label htmlFor="date">Graduation Date</label>
-      <input
-        type="date"
-        name="date"
-        id="date"
-        onChange={handleChange}
-        value={formData.date}
-        className="border h-7 py-2 px-1 rounded-lg"
-      />
+      <div className="flex justify-center mb-1.5 mt-1">
+        <label className="font-semibold" htmlFor="date">
+          Graduation:
+        </label>
+        <input
+          type="date"
+          name="date"
+          id="date"
+          onChange={handleChange}
+          value={formData.date}
+        />
+      </div>
       <label htmlFor="location">Location</label>
       <input
         type="text"
