@@ -64,7 +64,7 @@ function App() {
 
   return (
     <>
-      <div className="w-1/3 overflow-y-scroll mx-5 p-3 rounded-3xl bg-slate-50">
+      <div className="w-1/3 overflow-y-scroll mx-5 p-3 rounded-4xl bg-slate-50 h-10/12">
         <DetailsForm onSubmit={handleDetailsSubmit} />
         <EducationForm onSubmit={handleEducationSubmit} />
         <JobForm onSubmit={handleJobSubmit} />
