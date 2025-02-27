@@ -64,7 +64,7 @@ function App() {
 
   return (
     <>
-      <div className="border border-red-500 w-1/3 h-10/12 overflow-y-scroll m-5 p-3 rounded-3xl bg-slate-200">
+      <div className="w-1/3 h-10/12 overflow-y-scroll m-5 p-3 rounded-3xl bg-slate-50">
         <DetailsForm onSubmit={handleDetailsSubmit} />
         <EducationForm onSubmit={handleEducationSubmit} />
         <JobForm onSubmit={handleJobSubmit} />

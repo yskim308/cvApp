@@ -29,8 +29,11 @@ export default function DetailsForm({ onSubmit }: DetailsFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col">
-      <div className="text-3xl font-extrabold">Details</div>
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-900"
+    >
+      <div className="text-xl font-extrabold">Details</div>
       <label htmlFor="name">Name</label>
       <input
         type="text"
@@ -39,16 +42,18 @@ export default function DetailsForm({ onSubmit }: DetailsFormProps) {
         value={formData.name}
         onChange={handleChange}
         autoComplete="off"
+        className="border h-7 py-2 px-1 rounded-lg"
         required
       />
       <label htmlFor="email">Email</label>
       <input
-        type="text"
+        type="email"
         id="email"
         name="email"
         value={formData.email}
         onChange={handleChange}
         autoComplete="off"
+        className="border h-7 py-2 px-1 rounded-lg"
         required
       />
       <label htmlFor="phone">Phone Number</label>
@@ -59,6 +64,8 @@ export default function DetailsForm({ onSubmit }: DetailsFormProps) {
         value={formData.phone}
         onChange={handleChange}
         autoComplete="off"
+        className="border h-7 py-2 px-1 rounded-lg"
+        required
       />
       <label htmlFor="address">Address</label>
       <input
@@ -67,9 +74,17 @@ export default function DetailsForm({ onSubmit }: DetailsFormProps) {
         name="address"
         value={formData.address}
         onChange={handleChange}
+        className="border h-7 py-2 px-1 rounded-lg"
         autoComplete="off"
       />
-      <button type="submit">Submit</button>
+      <div className="flex justify-center p-1">
+        <button
+          type="submit"
+          className="border border-slate-400 p-1 rounded-xl text-slate-700"
+        >
+          Submit
+        </button>
+      </div>
     </form>
   );
 }
