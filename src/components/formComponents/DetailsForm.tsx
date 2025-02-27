@@ -33,7 +33,7 @@ export default function DetailsForm({ onSubmit }: DetailsFormProps) {
       onSubmit={handleSubmit}
       className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-900"
     >
-      <div className="text-xl font-extrabold">Details</div>
+      <div className="text-xl font-semibold">Details</div>
       <label htmlFor="name">Name</label>
       <input
         type="text"
