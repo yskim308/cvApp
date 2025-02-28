@@ -43,12 +43,26 @@ function App() {
     setDetailsData(data);
   };
 
-  const [educationData, setEducationData] = useState<EducationFormData>({
-    school: "Hardverd",
-    degree: "Rizzology, BS",
-    date: "January 8",
-    location: "Boston, MA",
-  });
+  const [educationData, setEducationData] = useState<EducationFormData[]>([
+    {
+      school: "Hardverd",
+      degree: "Rizzology, BS",
+      date: "January 2018",
+      location: "Boston, MA",
+    },
+    {
+      school: "MIT",
+      degree: "Instagram Reelogy, MS",
+      date: "July 2021",
+      location: "Boston, MA",
+    },
+    {
+      school: "Oxford University",
+      degree: "Brainrot Sciences, PHD",
+      date: "February 2025",
+      location: "Oxford, England i think",
+    },
+  ]);
 
   const handleEducationSubmit = (data: EducationFormData) => {
     setEducationData({

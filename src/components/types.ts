@@ -10,7 +10,8 @@ export interface EducationFormProps {
 }
 
 export interface EducationViewProps {
-  formData?: EducationFormData;
+  formData?: EducationFormData[];
+  handleEducationDelete: (schoolToDelete: EducationFormData) => void;
 }
 
 export interface DetailsFormData {
