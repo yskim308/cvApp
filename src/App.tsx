@@ -122,7 +122,10 @@ function App() {
         </div>
         <div className="border border-blue-500 overflow-y-auto mx-5 w-4xl bg-slate-50 px-14 py-10">
           <DetailsView formData={detailsData} />
-          <EducationView formData={educationData} />
+          <EducationView
+            formData={educationData}
+            handleEducationDelete={handleEducationDelete}
+          />
           <JobView formData={jobData} handleJobDelete={handleJobDelete} />
         </div>
       </div>
