@@ -4,7 +4,7 @@ import graduationIcon from "../../assets/graduationIcon.svg";
 
 export default function EducationView({ formData }: EducationViewProps) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-5">
       <div className="text-xl font-medium">Education</div>
       <hr></hr>
       <div className="flex justify-between">

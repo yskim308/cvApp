@@ -11,6 +11,27 @@ import EducationView from "./components/viewComponents/EducationView";
 import JobForm from "./components/formComponents/JobForm";
 import JobView from "./components/viewComponents/JobView";
 
+function dateToString(date: string) {
+  const months = {
+    "1": "January",
+    "2": "February",
+    "3": "March",
+    "4": "April",
+    "5": "May",
+    "6": "June",
+    "7": "July",
+    "8": "August",
+    "9": "September",
+    "10": "October",
+    "11": "November",
+    "12": "December",
+  };
+  const [month, , year] = date.split("/");
+  console.log(month, year);
+  const formattedString: string = `${months[month]} ${year}`;
+  return formattedString;
+}
+
 function App() {
   const [detailsData, setDetailsData] = useState<DetailsFormData>({
     name: "John Doe",
@@ -30,7 +51,10 @@ function App() {
   });
 
   const handleEducationSubmit = (data: EducationFormData) => {
-    setEducationData(data);
+    setEducationData({
+      ...data,
+      date: dateToString(data.date),
+    });
   };
 
   const [jobData, setJobData] = useState<JobFormData[]>([
