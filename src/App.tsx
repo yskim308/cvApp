@@ -65,10 +65,13 @@ function App() {
   ]);
 
   const handleEducationSubmit = (data: EducationFormData) => {
-    setEducationData({
-      ...data,
-      date: dateToString(data.date),
-    });
+    setEducationData([
+      ...educationData,
+      {
+        ...data,
+        date: dateToString(data.date),
+      },
+    ]);
   };
 
   const [jobData, setJobData] = useState<JobFormData[]>([
