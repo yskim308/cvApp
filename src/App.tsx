@@ -45,10 +45,10 @@ function App() {
 
   const [educationData, setEducationData] = useState<EducationFormData[]>([
     {
-      school: "Hardverd",
-      degree: "Rizzology, BS",
-      date: "January 2018",
-      location: "Boston, MA",
+      school: "Oxford University",
+      degree: "Brainrot Sciences, PHD",
+      date: "February 2025",
+      location: "Oxford, England",
     },
     {
       school: "MIT",
@@ -57,10 +57,10 @@ function App() {
       location: "Boston, MA",
     },
     {
-      school: "Oxford University",
-      degree: "Brainrot Sciences, PHD",
-      date: "February 2025",
-      location: "Oxford, England i think",
+      school: "Hardverd",
+      degree: "Rizzology, BS",
+      date: "January 2018",
+      location: "Boston, MA",
     },
   ]);
 
@@ -72,6 +72,12 @@ function App() {
         date: dateToString(data.date),
       },
     ]);
+  };
+
+  const handleEducationDelete = (schoolToDelete: EducationFormData) => {
+    setEducationData(
+      educationData.filter((school) => schoolToDelete !== school),
+    );
   };
 
   const [jobData, setJobData] = useState<JobFormData[]>([
