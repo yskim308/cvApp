@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { JobFormData, JobViewProps } from "../types";
+import location from "../../assets/map-marker.svg";
 
 export default function JobView({ formData, handleJobDelete }: JobViewProps) {
   const [hovered, setHovered] = useState<boolean>(false);
@@ -11,7 +12,10 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
             <div className="flex">
               <p className="font-semibold">{job.position},</p>
               <p className="pl-1">{job.company}</p>
-              <p className="pl-3"> - {job.location}</p>
+              <div className="flex pl-2">
+                <img src={location} className="w-4" />
+                <p>{job.location}</p>
+              </div>
             </div>
             <div className="flex">
               <p className="pr-1">{job.start}</p>
