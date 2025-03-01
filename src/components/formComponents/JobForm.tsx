@@ -66,6 +66,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           value={formData.position}
           autoComplete="off"
           className="border h-7 py-2 px-1 rounded-lg"
+          required
         />
         <div className="flex justify-around mb-2 mt-1">
           <div>
@@ -106,6 +107,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           value={formData.location}
           className="border h-7 py-2 px-1 rounded-lg"
           autoComplete="off"
+          required
         />
         <label htmlFor="description">description</label>
         <textarea
@@ -116,6 +118,7 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           className="border py-2 px-1 rounded-lg resize"
           rows={4}
           autoComplete="off"
+          required
         />
         <div className="flex justify-center p-1">
           <button

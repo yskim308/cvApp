@@ -70,6 +70,7 @@ export default function EducationForm({ onSubmit }: EducationFormProps) {
           name="date"
           id="date"
           onChange={handleChange}
+          required
           value={formData.date}
         />
       </div>
