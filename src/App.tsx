@@ -124,16 +124,16 @@ function App() {
       <div className="flex flex-grow overflow-hidden">
         <div className="w-1/3 overflow-y-auto mx-5 p-15 rounded-4xl">
           <DetailsForm onSubmit={handleDetailsSubmit} />
-          <EducationForm onSubmit={handleEducationSubmit} />
           <JobForm onSubmit={handleJobSubmit} />
+          <EducationForm onSubmit={handleEducationSubmit} />
         </div>
         <div className="border border-blue-500 overflow-y-auto mx-5 w-4xl bg-slate-50 px-14 py-10">
           <DetailsView formData={detailsData} />
+          <JobView formData={jobData} handleJobDelete={handleJobDelete} />
           <EducationView
             formData={educationData}
             handleEducationDelete={handleEducationDelete}
           />
-          <JobView formData={jobData} handleJobDelete={handleJobDelete} />
         </div>
       </div>
       <div className="text-lg flex justify-center">
