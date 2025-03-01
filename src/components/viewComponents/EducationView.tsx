@@ -18,7 +18,7 @@ export default function EducationView({
       <hr></hr>
       {formData?.map((school) => {
         return (
-          <div className={`flex justify-between my-1`}>
+          <div className={`flex justify-between`}>
             <div className="flex">
               <span className="font-semibold">{school?.school}</span> -{" "}
               {school?.degree}
