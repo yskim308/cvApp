@@ -1,10 +1,16 @@
+import { useState } from "react";
 import { JobFormData, JobViewProps } from "../types";
 
 export default function JobView({ formData, handleJobDelete }: JobViewProps) {
+  const [hovered, setHovered] = useState<boolean>(false);
   const renderJobs = () => {
     return formData?.map((job: JobFormData) => {
       return (
-        <li key={job.company}>
+        <li
+          key={job.company}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
           <div className="flex justify-between">
             <div className="flex">
               <p className="font-semibold">{job.position},</p>
@@ -12,20 +18,21 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
               <p className="pl-3"> - {job.location}</p>
             </div>
             <div className="flex">
-              <p>{job.start}</p>
-              <p>{job.end}</p>
+              <p className="pr-1">{job.start}</p>
+              <p> - </p>
+              <p className="pl-1">{job.end}</p>
+              <button
+                type="button"
+                className={`font-bold px-3 text-red-500 ${hovered ? "" : "hidden"}`}
+                onClick={() => {
+                  handleJobDelete(job);
+                }}
+              >
+                delete
+              </button>
             </div>
           </div>
           <p>{job.description}</p>
-          <button
-            type="button"
-            className="font-bold"
-            onClick={() => {
-              handleJobDelete(job);
-            }}
-          >
-            delete
-          </button>
         </li>
       );
     });
