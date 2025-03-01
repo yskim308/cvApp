@@ -5,18 +5,23 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
     return formData?.map((job: JobFormData) => {
       return (
         <li key={job.company}>
-          <p>{job.company}</p>
-          <p>{job.position}</p>
-          <p>{job.start}</p>
-          <p>{job.end}</p>
-          <p>{job.location}</p>
+          <div className="flex justify-between">
+            <div className="flex">
+              <p className="font-semibold">{job.position},</p>
+              <p className="pl-1">{job.company}</p>
+              <p className="pl-3"> - {job.location}</p>
+            </div>
+            <div className="flex">
+              <p>{job.start}</p>
+              <p>{job.end}</p>
+            </div>
+          </div>
           <p>{job.description}</p>
           <button
             type="button"
             className="font-bold"
             onClick={() => {
               handleJobDelete(job);
-              console.log("delete pressed?");
             }}
           >
             delete
@@ -27,7 +32,8 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
   };
   return (
     <>
-      <div className="text-2xl font-semibold">Work Experience</div>
+      <div className="text-xl font-medium mt-4">Work Experience</div>
+      <hr></hr>
       <ul>{renderJobs()}</ul>
     </>
   );

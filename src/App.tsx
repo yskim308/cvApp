@@ -12,7 +12,7 @@ import JobForm from "./components/formComponents/JobForm";
 import JobView from "./components/viewComponents/JobView";
 
 function dateToString(date: string) {
-  const months = {
+  const months: { [key: string]: string } = {
     "1": "January",
     "2": "February",
     "3": "March",
@@ -27,8 +27,8 @@ function dateToString(date: string) {
     "12": "December",
   };
   const [month, , year] = date.split("/");
-  console.log(month, year);
   const formattedString: string = `${months[month]} ${year}`;
+  console.log(formattedString);
   return formattedString;
 }
 
@@ -84,8 +84,8 @@ function App() {
     {
       company: "Google",
       position: "Janitor",
-      start: "January 19, 1876",
-      end: "March 20, 2099",
+      start: "January 1876",
+      end: "March 2099",
       location: "Mongolia",
       description:
         "Performed extreme cleaning operations and what not and things and such. lorem ipsum and yeah haha",
@@ -93,8 +93,8 @@ function App() {
     {
       company: "SigmaboySigmaboy",
       position: "Professional Bootlicker",
-      start: "July 14, 3022",
-      end: "March 25, 4100",
+      start: "July 3022",
+      end: "March 4100",
       location: "Boston, MA",
       description:
         "succesfully bootlicked the managers until ego was boosted 300% and 2.5x glazed",
@@ -102,7 +102,12 @@ function App() {
   ]);
 
   const handleJobSubmit = (newJob: JobFormData) => {
-    setJobData([...jobData, newJob]);
+    const jobToAdd: JobFormData = {
+      ...newJob,
+      start: dateToString(newJob.start),
+      end: dateToString(newJob.end),
+    };
+    setJobData([...jobData, jobToAdd]);
   };
 
   const handleJobDelete = (jobToDelete: JobFormData) => {
