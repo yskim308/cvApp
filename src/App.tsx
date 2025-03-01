@@ -82,22 +82,24 @@ function App() {
 
   const [jobData, setJobData] = useState<JobFormData[]>([
     {
-      company: "Google",
-      position: "Janitor",
+      company: "Job Title",
+      position: "Company",
       start: "January 1876",
       end: "March 2099",
-      location: "Mongolia",
-      description:
-        "Performed extreme cleaning operations and what not and things and such. lorem ipsum and yeah haha",
+      location: "City, Country",
+      description: `- Start each bullet with a strong, past-tense action verb
+      - Each bullet should be 1-2 lines long and max 1 sentence long
+      - Don't let bullets spill onto the next line`,
     },
     {
-      company: "SigmaboySigmaboy",
-      position: "Professional Bootlicker",
+      company: "Google",
+      position: "Bootlicker",
       start: "July 3022",
       end: "March 4100",
-      location: "Boston, MA",
-      description:
-        "succesfully bootlicked the managers until ego was boosted 300% and 2.5x glazed",
+      location: "San Francisco, CA",
+      description: `- Glazed upper management until ego was boosted 300%
+      - Licked up to 300 boots per day to improve management narcissism
+      - Increased the rate of kissing ass by 200% in 6 months`,
     },
   ]);
 
