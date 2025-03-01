@@ -1,3 +1,32 @@
+export interface DetailsFormData {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+}
+
+export interface DetailsFormProps {
+  onSubmit: (data: DetailsFormData) => void;
+}
+
+export interface DetailsViewProps {
+  formData?: DetailsFormData;
+}
+
+export interface SkillsFormData {
+  skill: string;
+  desciprtion: string;
+}
+
+export interface SkillsFormProps {
+  onSubmi: (data: SkillsFormData) => void;
+}
+
+export interface SkillViewProps {
+  data: SkillsFormData[];
+  handleDelete: (skill: SkillsFormData) => void;
+}
+
 export interface EducationFormData {
   school: string;
   degree: string;
@@ -12,21 +41,6 @@ export interface EducationFormProps {
 export interface EducationViewProps {
   formData?: EducationFormData[];
   handleEducationDelete: (schoolToDelete: EducationFormData) => void;
-}
-
-export interface DetailsFormData {
-  name: string;
-  email: string;
-  phone: string;
-  address: string;
-}
-
-export interface DetailsFormProps {
-  onSubmit: (data: DetailsFormData) => void;
-}
-
-export interface DetailsViewProps {
-  formData?: DetailsFormData;
 }
 
 export interface JobFormData {
