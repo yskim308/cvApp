@@ -108,13 +108,13 @@ export default function JobForm({ onSubmit }: JobFormProps) {
           autoComplete="off"
         />
         <label htmlFor="description">description</label>
-        <input
-          type="text"
+        <textarea
           name="description"
           id="description"
           onChange={handleChange}
           value={formData.description}
-          className="border h-7 py-2 px-1 rounded-lg"
+          className="border py-2 px-1 rounded-lg resize"
+          rows={4}
           autoComplete="off"
         />
         <div className="flex justify-center p-1">
