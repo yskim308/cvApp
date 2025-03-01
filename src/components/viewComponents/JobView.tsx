@@ -6,11 +6,7 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
   const renderJobs = () => {
     return formData?.map((job: JobFormData) => {
       return (
-        <li
-          key={job.company}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-        >
+        <li key={job.company} className="mb-5">
           <div className="flex justify-between">
             <div className="flex">
               <p className="font-semibold">{job.position},</p>
@@ -40,8 +36,13 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
   return (
     <>
       <div className="text-xl font-medium mt-4">Work Experience</div>
-      <hr></hr>
-      <ul>{renderJobs()}</ul>
+      <hr className="mb-1"></hr>
+      <ul
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        {renderJobs()}
+      </ul>
     </>
   );
 }
