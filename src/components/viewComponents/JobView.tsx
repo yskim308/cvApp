@@ -32,7 +32,7 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
               </button>
             </div>
           </div>
-          <p>{job.description}</p>
+          <p className="whitespace-pre-line">{job.description}</p>
         </li>
       );
     });
