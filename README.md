@@ -2,6 +2,8 @@
 
 This project is a React application designed to collect and display user data for a resume or CV. It consists of form components for data input and view components for data display.
 
+[Live Preview](https://yskim308cvapp.netlify.app/)
+
 ## Project Structure
 
 -   `src/components/formComponents/`: Contains individual form components.
