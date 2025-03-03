@@ -28,7 +28,7 @@ export default function SkillsForm({ appendSkill }: SkillsFormProps) {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col border border-slate-300 px-5 pt-5 rounded-4xl text-slate-700 bg-slate-50"
+        className="flex flex-col border border-slate-300 my-3 px-5 pt-5 rounded-4xl text-slate-700 bg-slate-50"
       >
         <div className="text-xl font-semibold">Skills</div>
         <label htmlFor="skill">Skill</label>
