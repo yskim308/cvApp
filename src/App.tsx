@@ -10,6 +10,7 @@ import {
 import EducationView from "./components/viewComponents/EducationView";
 import JobForm from "./components/formComponents/JobForm";
 import JobView from "./components/viewComponents/JobView";
+import SkillsForm from "./components/formComponents/SkillsForm";
 
 function dateToString(date: string) {
   const months: { [key: string]: string } = {
@@ -124,6 +125,7 @@ function App() {
       <div className="flex flex-grow overflow-hidden">
         <div className="w-1/3 overflow-y-auto mx-5 p-15 rounded-4xl">
           <DetailsForm onSubmit={handleDetailsSubmit} />
+          <SkillsForm appendSkill={} />
           <JobForm onSubmit={handleJobSubmit} />
           <EducationForm onSubmit={handleEducationSubmit} />
         </div>
