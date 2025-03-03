@@ -6,11 +6,13 @@ import {
   DetailsFormData,
   EducationFormData,
   JobFormData,
+  SkillsFormData,
 } from "./components/types";
 import EducationView from "./components/viewComponents/EducationView";
 import JobForm from "./components/formComponents/JobForm";
 import JobView from "./components/viewComponents/JobView";
 import SkillsForm from "./components/formComponents/SkillsForm";
+import SkillsView from "./components/viewComponents/SKillsView";
 
 function dateToString(date: string) {
   const months: { [key: string]: string } = {
@@ -42,6 +44,34 @@ function App() {
   });
   const handleDetailsSubmit = (data: DetailsFormData) => {
     setDetailsData(data);
+  };
+
+  const [skillsData, setSKillsData] = useState<SkillsFormData[]>([
+    {
+      skill: "skill",
+      description: "tools or description of the skill",
+    },
+    {
+      skill: "Brainrotting",
+      description:
+        "advanced brainrot certifications in instagram reels, tik tok, and youtube shorts",
+    },
+    {
+      skill: "Operating Systems",
+      description: "C++ and ARM architecture OS",
+    },
+    {
+      skill: "English Language",
+      description: "TOEFL 120/120 and proven rage-baiting skills on reddit",
+    },
+  ]);
+
+  const appendSkill = (skill: SkillsFormData) => {
+    setSKillsData([...skillsData, skill]);
+  };
+
+  const handleSkillDelete = (skillToDelete: SkillsFormData) => {
+    setSKillsData(skillsData.filter((skill) => skill !== skillToDelete));
   };
 
   const [educationData, setEducationData] = useState<EducationFormData[]>([
@@ -125,12 +155,13 @@ function App() {
       <div className="flex flex-grow overflow-hidden">
         <div className="w-1/3 overflow-y-auto mx-5 p-15 rounded-4xl">
           <DetailsForm onSubmit={handleDetailsSubmit} />
-          <SkillsForm appendSkill={} />
+          <SkillsForm appendSkill={appendSkill} />
           <JobForm onSubmit={handleJobSubmit} />
           <EducationForm onSubmit={handleEducationSubmit} />
         </div>
         <div className="border border-blue-500 overflow-y-auto mx-5 w-4xl bg-slate-50 px-14 py-10">
           <DetailsView formData={detailsData} />
+          <SkillsView data={skillsData} handleDelete={handleSkillDelete} />
           <JobView formData={jobData} handleJobDelete={handleJobDelete} />
           <EducationView
             formData={educationData}

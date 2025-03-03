@@ -22,7 +22,7 @@ export interface SkillsFormProps {
   appendSkill: (data: SkillsFormData) => void;
 }
 
-export interface SkillViewProps {
+export interface SkillsViewProps {
   data: SkillsFormData[];
   handleDelete: (skill: SkillsFormData) => void;
 }
