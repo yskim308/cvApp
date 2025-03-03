@@ -28,7 +28,7 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
                   handleJobDelete(job);
                 }}
               >
-                delete
+                x
               </button>
             </div>
           </div>

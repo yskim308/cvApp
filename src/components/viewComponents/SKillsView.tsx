@@ -23,7 +23,7 @@ function Skill({ skill, handleDelete }: SkillProps) {
         type="button"
         onClick={() => handleDelete}
       >
-        delete
+        x
       </button>
     </div>
   );

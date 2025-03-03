@@ -37,7 +37,7 @@ export default function EducationView({
                 className={`text-red-500 font-bold ${hovered ? "" : "hidden"}`}
                 onClick={() => handleEducationDelete(school)}
               >
-                delete
+                x
               </button>
             </div>
           </div>
