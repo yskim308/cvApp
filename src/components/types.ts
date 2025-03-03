@@ -15,11 +15,11 @@ export interface DetailsViewProps {
 
 export interface SkillsFormData {
   skill: string;
-  desciprtion: string;
+  description: string;
 }
 
 export interface SkillsFormProps {
-  onSubmi: (data: SkillsFormData) => void;
+  appendSkill: (data: SkillsFormData) => void;
 }
 
 export interface SkillViewProps {
