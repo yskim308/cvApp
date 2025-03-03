@@ -18,7 +18,7 @@ function Skill({ skill, handleDelete }: SkillProps) {
         <button
           className={`pr-3 text-red-500 font-bold ${hover ? "" : "hidden"}`}
           type="button"
-          onClick={() => handleDelete}
+          onClick={() => handleDelete(skill)}
         >
           x
         </button>
