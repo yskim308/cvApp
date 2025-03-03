@@ -189,8 +189,16 @@ function App() {
           />
         </div>
       </div>
-      <div className="text-lg flex justify-center">
-        <p>footer...</p>
+      <div className="text-lg flex justify-center mt-3">
+        <a href="https://github.com/yskim308" target="none">
+          <img className="w-8" src="/github.svg" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/young-seo-kim-464b11220/"
+          target="none"
+        >
+          <img className="w-8" src="/linkedin.svg" />
+        </a>
       </div>
     </div>
   );
