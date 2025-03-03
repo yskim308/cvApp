@@ -129,3 +129,8 @@ This project is a React application designed to collect and display user data fo
 -   The `dateToString` function is used to convert dates from the form data into a more readable format for the view.
 -   The `src/types.ts` file contains typescript interfaces that define the types of the data being passed between components.
 -   The `src/assets` folder contains svg files being used as icons in the view components.
+
+## Potential Improvements
+-   Rendered list elemenets do not have a unique key
+-   The logic of rendering in views are inconsistent. Generally, I should have rendered each individual element and then passed that element to the map function
+-   The button for removal is a little janky. Should've used a proper svg or img, but i was lazy
