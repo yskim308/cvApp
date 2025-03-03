@@ -10,14 +10,16 @@ function Skill({ skill, handleDelete }: SkillProps) {
   const [hover, setHover] = useState<boolean>(false);
   return (
     <div
-      className="flex"
+      className="flex justify-between"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <p>{skill.skill}:</p>
-      <p>{skill.description}</p>
+      <div className="flex">
+        <p className="font-semibold mr-1">{skill.skill}:</p>
+        <p>{skill.description}</p>
+      </div>
       <button
-        className={`text-red-500 ${hover ? "" : "hidden"}`}
+        className={`text-red-500 font-bold ${hover ? "" : "hidden"}`}
         type="button"
         onClick={() => handleDelete}
       >
@@ -29,7 +31,9 @@ function Skill({ skill, handleDelete }: SkillProps) {
 
 export default function SkillsView({ data, handleDelete }: SkillsViewProps) {
   return (
-    <div>
+    <div className="mt-5">
+      <div className="text-xl font-medium">Skills</div>
+      <hr></hr>
       {data.map((skill) => {
         return <Skill skill={skill} handleDelete={handleDelete} />;
       })}
