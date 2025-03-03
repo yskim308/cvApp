@@ -146,11 +146,11 @@ function App() {
       company: "Qin Dynasty Emperor Inner Circle",
       position: "Eunuch",
       start: "July 706",
-      end: "September 715",
+      end: "September 753",
       location: "Beijing, China",
       description: `- Demonstrated excellence in the civil servant exam
       - Succesfully poisoned multiple emperors
-      - Seduced the wives of 3 Emperors in sucecssion`,
+      - Seduced the wives of 3 emperors in a row`,
     },
   ]);
 
