@@ -15,16 +15,16 @@ function Skill({ skill, handleDelete }: SkillProps) {
       onMouseLeave={() => setHover(false)}
     >
       <div className="flex">
+        <button
+          className={`pr-3 text-red-500 font-bold ${hover ? "" : "hidden"}`}
+          type="button"
+          onClick={() => handleDelete}
+        >
+          x
+        </button>
         <p className="font-semibold mr-1">{skill.skill}:</p>
         <p>{skill.description}</p>
       </div>
-      <button
-        className={`text-red-500 font-bold ${hover ? "" : "hidden"}`}
-        type="button"
-        onClick={() => handleDelete}
-      >
-        x
-      </button>
     </div>
   );
 }

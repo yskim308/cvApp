@@ -10,6 +10,15 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
         <li key={job.company} className="mb-5">
           <div className="flex justify-between">
             <div className="flex">
+              <button
+                type="button"
+                className={`font-bold pr-3 text-red-500 ${hovered ? "" : "hidden"}`}
+                onClick={() => {
+                  handleJobDelete(job);
+                }}
+              >
+                x
+              </button>
               <p className="font-semibold">{job.position},</p>
               <p className="pl-1">{job.company}</p>
               <div className="flex pl-2">
@@ -21,15 +30,6 @@ export default function JobView({ formData, handleJobDelete }: JobViewProps) {
               <p className="pr-1">{job.start}</p>
               <p> - </p>
               <p className="pl-1">{job.end}</p>
-              <button
-                type="button"
-                className={`font-bold px-3 text-red-500 ${hovered ? "" : "hidden"}`}
-                onClick={() => {
-                  handleJobDelete(job);
-                }}
-              >
-                x
-              </button>
             </div>
           </div>
           <p className="whitespace-pre-line">{job.description}</p>
