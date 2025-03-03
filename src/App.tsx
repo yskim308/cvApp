@@ -48,7 +48,7 @@ function App() {
 
   const [skillsData, setSKillsData] = useState<SkillsFormData[]>([
     {
-      skill: "skill",
+      skill: "Skill",
       description: "tools or description of the skill",
     },
     {
@@ -76,13 +76,13 @@ function App() {
 
   const [educationData, setEducationData] = useState<EducationFormData[]>([
     {
-      school: "Oxford University",
+      school: "Auxferd University",
       degree: "Brainrot Sciences, PHD",
       date: "February 2025",
       location: "Oxford, England",
     },
     {
-      school: "MIT",
+      school: "Massive Institue of Technology",
       degree: "Instagram Reelogy, MS",
       date: "July 2021",
       location: "Boston, MA",
@@ -131,6 +131,26 @@ function App() {
       description: `- Glazed upper management until ego was boosted 300%
       - Licked up to 300 boots per day to improve management narcissism
       - Increased the rate of kissing ass by 200% in 6 months`,
+    },
+    {
+      company: "Dutch East India Company",
+      position: "Spice Merchant",
+      start: "August 1632",
+      end: "October 1659",
+      location: "Indonesia",
+      description: `- Faciliated trade of spices between new and old world
+      - Contributed to European colonization and dominance of South East Asia
+      - Commited unforgiveabe human rights violations`,
+    },
+    {
+      company: "Qin Dynasty Emperor Inner Circle",
+      position: "Eunuch",
+      start: "July 706",
+      end: "September 715",
+      location: "Beijing, China",
+      description: `- Demonstrated excellence in the civil servant exam
+      - Succesfully poisoned multiple emperors
+      - Seduced the wives of 3 Emperors in sucecssion`,
     },
   ]);
 
